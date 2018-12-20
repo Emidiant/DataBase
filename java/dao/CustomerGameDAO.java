@@ -14,7 +14,7 @@ public interface CustomerGameDAO {
     //read
     List<CustomerGame> getAll() throws SQLException;
 
-    CustomerGame getByGameIdAndCustomerId(int idGame, int idCustomer) throws SQLException;
+    int getByGameIdAndCustomerId(int idGame, int idCustomer) throws SQLException;
 
     //update если покупатель передаривает игру
     void update(CustomerGame customerGame, Customer newCustomer) throws SQLException;

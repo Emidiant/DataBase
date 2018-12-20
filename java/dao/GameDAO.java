@@ -1,6 +1,7 @@
 package dao;
 
 
+import entity.Customer;
 import entity.Game;
 
 import java.sql.SQLException;
@@ -10,6 +11,8 @@ public interface GameDAO {
 
     //create
     void add(Game game) throws SQLException;
+
+    List<Game> viewLibraryOfCustomer(int idCustomer) throws SQLException;
 
     //read
     List<Game> getAll() throws SQLException;
@@ -21,4 +24,6 @@ public interface GameDAO {
 
     //delete
     void remove(Game game) throws SQLException;
+
+    Game mostPopular() throws SQLException;
 }
